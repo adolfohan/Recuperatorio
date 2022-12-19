@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Datos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <div class="container mt-3">
+        <div class="jumbotron">
+            <h2>Ingrese datos de pasajero: </h2>
+            <br>
+
+            <form action="/aeropuerto/entrada" method="post" autocomplete="off">
+                <div class="form-group">
+                    <label for="nombreYApellido">Nombre y Apellido</label>
+                    <input type="text" id="nombreYApellido" name="nombreYApellido" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="pasaporte">Pasaporte</label>
+                    <input type="number" id="pasaporte" name="pasaporte" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input type="text" id="fechaNacimiento" name="fechaNacimiento" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="horaVuelo">Hora del vuelo</label>
+                    <input type="text" id="horaVuelo" name="horaVuelo" class="form-control">
+                </div>
+
+                <button class="btn btn-success mt-3">Enviar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
