@@ -22,10 +22,10 @@ describe('test api rest full', () => {
 
             const user = response.body
             expect(user).to.include.keys('nombreYApellido','pasaporte','fechaNacimiento','horaVuelo')
-            expect(user.nombreYApellido).to.eql(cliente.nombreYApellido)
-            expect(user.pasaporte).to.eql(cliente.pasaporte)
-            expect(user.fechaNacimiento).to.eql(cliente.fechaNacimiento)
-            expect(user.horaVuelo).to.eql(cliente.horaVuelo)
+            expect(user.nombreYApellido).to.eql(pasajero.nombreYApellido)
+            expect(user.pasaporte).to.eql(pasajero.pasaporte)
+            expect(user.fechaNacimiento).to.eql(pasajero.fechaNacimiento)
+            expect(user.horaVuelo).to.eql(pasajero.horaVuelo)
         })
     })
 })

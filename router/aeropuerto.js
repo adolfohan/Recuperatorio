@@ -13,9 +13,7 @@ class RouterAeropuerto {
         router.post('/entrada', this.controladorAeropuerto.guardarDatos)
 
         router.get('/entrada', this.controladorAeropuerto.obtenerDatos)
-        // router.get('/promedio', this.controladorNumeros.obtenerPromedio)
-        // router.get('/minmax', this.controladorNumeros.obtenerMinMax)
-        // router.get('/cantidad', this.controladorNumeros.obtenerCantidad)
+        router.get('/prioridad', this.controladorAeropuerto.obtenerPasajeroConPrioridad)
 
         return router
     }
