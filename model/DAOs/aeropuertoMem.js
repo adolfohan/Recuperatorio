@@ -1,13 +1,19 @@
 class AeropuertoMemDAO {
 
     constructor() {
-        this.datos = []
+        this.datos = [
+            {nombreYApellido: 'Adolfo Han', pasaporte: 33511838, fechaNacimiento: '06/01/1988', horaVuelo: 19}
+        ]
     }
 
-    guardarDatos = async dato => {
+    guardarDatos = async pasajero => {
         try {
-            this.datos.push(dato)
-            return dato
+            pasajero.nombreYApellido = String(nombreYApellido)
+            pasajero.pasaporte = parseInt(pasaporte)
+
+        this.datos.push(pasajero)
+
+        return await Promise.resolve(pasajero)
         }
         catch(error) {
             console.log('error en guardarDatos:',error)
@@ -19,12 +25,16 @@ class AeropuertoMemDAO {
 
     obtenerDatos = async () => {
         try {
-            return this.datos
+            return await Promise.resolve(this.datos)
         }
         catch(error) {
             console.log('error en obtenerDatos', error)
             return []
         }
+    }
+
+    getHoraActual() {
+        return new Date();
     }
 }
 

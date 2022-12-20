@@ -28,6 +28,17 @@ class ControladorAeropuerto {
             console.log('error obtenerDatos', error)
         }
     }
+
+    obtenerPasajeroConPrioridad = async (req,res) => {
+        try {
+            let pasajero = await this.apiAeropuerto.proximoASalir()
+
+            res.json({pasajero})
+        }
+        catch(error) {
+            console.log('error proximoASalir', error)
+        }
+    }
 }
 
 export default ControladorAeropuerto
